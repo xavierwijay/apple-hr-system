@@ -3,11 +3,7 @@
         <div>
             <p class="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">Apple HR</p>
             <h2 class="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#1d1d1f]">
-                {{ __('Tambah Karyawan Baru') }}
-            </h2>
-        </div>
-    </x-slot>
-
+                {{ __('Add New Employee') }}
     <div class="mx-auto max-w-2xl">
         <div class="apple-card p-6 sm:p-8">
             @if($errors->any())
@@ -28,13 +24,13 @@
                     <input type="text" name="employee_id" placeholder="AAPL-103" required class="apple-input">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Nama Lengkap</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Full Name</label>
                     <input type="text" name="nama" required class="apple-input">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Jabatan / Role</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Title / Role</label>
                     <select name="role_title" required class="apple-input appearance-none">
-                        <option value="" disabled selected>Pilih Jabatan</option>
+                        <option value="" disabled selected>Select Role</option>
                         <option value="iOS Developer">iOS Developer</option>
                         <option value="Senior Engineer">Senior Engineer</option>
                         <option value="Product Manager">Product Manager</option>
@@ -45,9 +41,9 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Divisi</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Division</label>
                     <select name="team_division" required class="apple-input appearance-none">
-                        <option value="" disabled selected>Pilih Divisi</option>
+                        <option value="" disabled selected>Select Division</option>
                         <option value="Software Engineering">Software Engineering</option>
                         <option value="Hardware Engineering">Hardware Engineering</option>
                         <option value="Design">Design</option>
@@ -58,9 +54,9 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Lokasi Kerja</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Work Location</label>
                     <select name="location" required class="apple-input appearance-none">
-                        <option value="" disabled selected>Pilih Lokasi</option>
+                        <option value="" disabled selected>Select Location</option>
                         <option value="Apple Park, Cupertino">Apple Park, Cupertino</option>
                         <option value="Apple Infinite Loop, Cupertino">Apple Infinite Loop, Cupertino</option>
                         <option value="One Apple Park Way, Cupertino">One Apple Park Way, Cupertino</option>
@@ -71,16 +67,16 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Gaji (USD / Tahun)</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Salary (USD / Year)</label>
                     <input type="number" name="salary" placeholder="120000" required class="apple-input">
                 </div>
 
                 <div class="flex items-center justify-end gap-3 border-t border-[#ececec] pt-6">
                     <a href="{{ route('employees.index') }}" class="apple-button-secondary">
-                        Batal
+                        Cancel
                     </a>
                     <button type="submit" class="apple-button">
-                        Simpan Data
+                        Save Data
                     </button>
                 </div>
             </form>

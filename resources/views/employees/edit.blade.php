@@ -3,7 +3,7 @@
         <div>
             <p class="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">Apple HR</p>
             <h2 class="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#1d1d1f]">
-                {{ __('Edit Data Karyawan') }}
+                {{ __('Edit Employee Data') }}
             </h2>
         </div>
     </x-slot>
@@ -29,13 +29,13 @@
                     <input type="text" name="employee_id" value="{{ $employee->employee_id }}" required class="apple-input">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Nama Lengkap</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Full Name</label>
                     <input type="text" name="nama" value="{{ $employee->nama }}" required class="apple-input">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Jabatan / Role</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Title / Role</label>
                     <select name="role_title" required class="apple-input appearance-none">
-                        <option value="" disabled>Pilih Jabatan</option>
+                        <option value="" disabled>Select Role</option>
                         <option value="iOS Developer" {{ $employee->role_title == 'iOS Developer' ? 'selected' : '' }}>iOS Developer</option>
                         <option value="Senior Engineer" {{ $employee->role_title == 'Senior Engineer' ? 'selected' : '' }}>Senior Engineer</option>
                         <option value="Product Manager" {{ $employee->role_title == 'Product Manager' ? 'selected' : '' }}>Product Manager</option>
@@ -46,9 +46,9 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Divisi</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Division</label>
                     <select name="team_division" required class="apple-input appearance-none">
-                        <option value="" disabled>Pilih Divisi</option>
+                        <option value="" disabled>Select Division</option>
                         <option value="Software Engineering" {{ $employee->team_division == 'Software Engineering' ? 'selected' : '' }}>Software Engineering</option>
                         <option value="Hardware Engineering" {{ $employee->team_division == 'Hardware Engineering' ? 'selected' : '' }}>Hardware Engineering</option>
                         <option value="Design" {{ $employee->team_division == 'Design' ? 'selected' : '' }}>Design</option>
@@ -59,9 +59,9 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Lokasi Kerja</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Work Location</label>
                     <select name="location" required class="apple-input appearance-none">
-                        <option value="" disabled>Pilih Lokasi</option>
+                        <option value="" disabled>Select Location</option>
                         <option value="Apple Park, Cupertino" {{ $employee->location == 'Apple Park, Cupertino' ? 'selected' : '' }}>Apple Park, Cupertino</option>
                         <option value="Apple Infinite Loop, Cupertino" {{ $employee->location == 'Apple Infinite Loop, Cupertino' ? 'selected' : '' }}>Apple Infinite Loop, Cupertino</option>
                         <option value="One Apple Park Way, Cupertino" {{ $employee->location == 'One Apple Park Way, Cupertino' ? 'selected' : '' }}>One Apple Park Way, Cupertino</option>
@@ -72,16 +72,16 @@
                     </select>
                 </div>
                 <div>
-                    <label class="block text-sm font-medium text-[#1d1d1f]">Gaji (USD / Tahun)</label>
+                    <label class="block text-sm font-medium text-[#1d1d1f]">Salary (USD / Year)</label>
                     <input type="number" name="salary" value="{{ $employee->salary }}" required class="apple-input">
                 </div>
 
                 <div class="flex items-center justify-end gap-3 border-t border-[#ececec] pt-6">
                     <a href="{{ route('employees.index') }}" class="apple-button-secondary">
-                        Batal
+                        Cancel
                     </a>
                     <button type="submit" class="apple-button">
-                        Perbarui Data
+                        Update Data
                     </button>
                 </div>
             </form>

@@ -17,13 +17,13 @@
 
         <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-                <h3 class="apple-section-title">Sistem Informasi Kepegawaian</h3>
-                <p class="apple-muted mt-2">Daftar tim dan karyawan Apple Ecosystem.</p>
+                <h3 class="apple-section-title">Employee Information System</h3>
+                <p class="apple-muted mt-2">Team and employee directory for the Apple Ecosystem.</p>
             </div>
 
             @if(auth()->user()->role === 'admin')
                 <a href="{{ route('employees.create') }}" class="apple-button">
-                    + Tambah Karyawan
+                    + Add Employee
                 </a>
             @endif
         </div>
@@ -34,13 +34,13 @@
                     <thead class="bg-[#f5f5f7]">
                         <tr class="text-[#1d1d1f]">
                             <th class="px-4 py-3 font-semibold">Employee ID</th>
-                            <th class="px-4 py-3 font-semibold">Nama</th>
-                            <th class="px-4 py-3 font-semibold">Jabatan / Role</th>
-                            <th class="px-4 py-3 font-semibold">Divisi</th>
-                            <th class="px-4 py-3 font-semibold">Lokasi</th>
-                            <th class="px-4 py-3 font-semibold">Gaji</th>
+                            <th class="px-4 py-3 font-semibold">Name</th>
+                            <th class="px-4 py-3 font-semibold">Title / Role</th>
+                            <th class="px-4 py-3 font-semibold">Division</th>
+                            <th class="px-4 py-3 font-semibold">Location</th>
+                            <th class="px-4 py-3 font-semibold">Salary</th>
                             @if(auth()->user()->role === 'admin')
-                                <th class="px-4 py-3 text-right font-semibold">Aksi</th>
+                                <th class="px-4 py-3 text-right font-semibold">Actions</th>
                             @endif
                         </tr>
                     </thead>
@@ -62,10 +62,10 @@
                                     <td class="px-4 py-4">
                                         <div class="flex items-center justify-end gap-3">
                                             <a href="{{ route('employees.edit', $emp->id) }}" class="text-sm font-semibold text-[#1d1d1f] underline decoration-[#7d7d7d] underline-offset-4 transition hover:text-[#4c4c4c]">Edit</a>
-                                            <form action="{{ route('employees.destroy', $emp->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus karyawan ini?')">
+                                            <form action="{{ route('employees.destroy', $emp->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this employee?')">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="text-sm font-semibold text-[#b42318] underline decoration-[#d97706] underline-offset-4 transition hover:text-[#7f1d1d]">Hapus</button>
+                                                <button type="submit" class="text-sm font-semibold text-[#b42318] underline decoration-[#d97706] underline-offset-4 transition hover:text-[#7f1d1d]">Delete</button>
                                             </form>
                                         </div>
                                     </td>
@@ -74,7 +74,7 @@
                         @empty
                             <tr>
                                 <td colspan="{{ auth()->user()->role === 'admin' ? 7 : 6 }}" class="px-4 py-10 text-center text-sm text-[#6e6e73]">
-                                    Belum ada data pegawai.
+                                    No employee data available yet.
                                 </td>
                             </tr>
                         @endforelse
