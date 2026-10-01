@@ -34,15 +34,42 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Jabatan / Role</label>
-                    <input type="text" name="role_title" value="{{ $employee->role_title }}" required class="apple-input">
+                    <select name="role_title" required class="apple-input appearance-none">
+                        <option value="" disabled>Pilih Jabatan</option>
+                        <option value="iOS Developer" {{ $employee->role_title == 'iOS Developer' ? 'selected' : '' }}>iOS Developer</option>
+                        <option value="Senior Engineer" {{ $employee->role_title == 'Senior Engineer' ? 'selected' : '' }}>Senior Engineer</option>
+                        <option value="Product Manager" {{ $employee->role_title == 'Product Manager' ? 'selected' : '' }}>Product Manager</option>
+                        <option value="HR Manager" {{ $employee->role_title == 'HR Manager' ? 'selected' : '' }}>HR Manager</option>
+                        <option value="Data Analyst" {{ $employee->role_title == 'Data Analyst' ? 'selected' : '' }}>Data Analyst</option>
+                        <option value="QA Engineer" {{ $employee->role_title == 'QA Engineer' ? 'selected' : '' }}>QA Engineer</option>
+                        <option value="Design Lead" {{ $employee->role_title == 'Design Lead' ? 'selected' : '' }}>Design Lead</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Divisi</label>
-                    <input type="text" name="team_division" value="{{ $employee->team_division }}" required class="apple-input">
+                    <select name="team_division" required class="apple-input appearance-none">
+                        <option value="" disabled>Pilih Divisi</option>
+                        <option value="Software Engineering" {{ $employee->team_division == 'Software Engineering' ? 'selected' : '' }}>Software Engineering</option>
+                        <option value="Hardware Engineering" {{ $employee->team_division == 'Hardware Engineering' ? 'selected' : '' }}>Hardware Engineering</option>
+                        <option value="Design" {{ $employee->team_division == 'Design' ? 'selected' : '' }}>Design</option>
+                        <option value="Operations" {{ $employee->team_division == 'Operations' ? 'selected' : '' }}>Operations</option>
+                        <option value="People & Culture" {{ $employee->team_division == 'People & Culture' ? 'selected' : '' }}>People & Culture</option>
+                        <option value="Finance" {{ $employee->team_division == 'Finance' ? 'selected' : '' }}>Finance</option>
+                        <option value="Security" {{ $employee->team_division == 'Security' ? 'selected' : '' }}>Security</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Lokasi Kerja</label>
-                    <input type="text" name="location" value="{{ $employee->location }}" required class="apple-input">
+                    <select name="location" required class="apple-input appearance-none">
+                        <option value="" disabled>Pilih Lokasi</option>
+                        <option value="Apple Park, Cupertino" {{ $employee->location == 'Apple Park, Cupertino' ? 'selected' : '' }}>Apple Park, Cupertino</option>
+                        <option value="Apple Infinite Loop, Cupertino" {{ $employee->location == 'Apple Infinite Loop, Cupertino' ? 'selected' : '' }}>Apple Infinite Loop, Cupertino</option>
+                        <option value="One Apple Park Way, Cupertino" {{ $employee->location == 'One Apple Park Way, Cupertino' ? 'selected' : '' }}>One Apple Park Way, Cupertino</option>
+                        <option value="Apple Singapore" {{ $employee->location == 'Apple Singapore' ? 'selected' : '' }}>Apple Singapore</option>
+                        <option value="Apple Jakarta" {{ $employee->location == 'Apple Jakarta' ? 'selected' : '' }}>Apple Jakarta</option>
+                        <option value="Apple Seoul" {{ $employee->location == 'Apple Seoul' ? 'selected' : '' }}>Apple Seoul</option>
+                        <option value="Apple Tokyo" {{ $employee->location == 'Apple Tokyo' ? 'selected' : '' }}>Apple Tokyo</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Gaji (USD / Tahun)</label>

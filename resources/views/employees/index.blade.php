@@ -5,9 +5,6 @@
                 <p class="text-[10px] font-medium uppercase tracking-[0.22em] text-[#6e6e73]">Apple Directory</p>
                 <h2 class="mt-2 text-2xl font-semibold tracking-[-0.05em] text-[#1d1d1f]">Directory Services</h2>
             </div>
-            <span class="rounded-full border border-black/10 bg-[#111111] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white shadow-sm">
-                {{ strtoupper(auth()->user()->role) }}
-            </span>
         </div>
     </x-slot>
 
