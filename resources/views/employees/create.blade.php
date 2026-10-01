@@ -33,15 +33,42 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Jabatan / Role</label>
-                    <input type="text" name="role_title" placeholder="iOS Developer" required class="apple-input">
+                    <select name="role_title" required class="apple-input appearance-none">
+                        <option value="" disabled selected>Pilih Jabatan</option>
+                        <option value="iOS Developer">iOS Developer</option>
+                        <option value="Senior Engineer">Senior Engineer</option>
+                        <option value="Product Manager">Product Manager</option>
+                        <option value="HR Manager">HR Manager</option>
+                        <option value="Data Analyst">Data Analyst</option>
+                        <option value="QA Engineer">QA Engineer</option>
+                        <option value="Design Lead">Design Lead</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Divisi</label>
-                    <input type="text" name="team_division" placeholder="Software Engineering" required class="apple-input">
+                    <select name="team_division" required class="apple-input appearance-none">
+                        <option value="" disabled selected>Pilih Divisi</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Hardware Engineering">Hardware Engineering</option>
+                        <option value="Design">Design</option>
+                        <option value="Operations">Operations</option>
+                        <option value="People & Culture">People & Culture</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Security">Security</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Lokasi Kerja</label>
-                    <input type="text" name="location" placeholder="Apple Park, Cupertino" required class="apple-input">
+                    <select name="location" required class="apple-input appearance-none">
+                        <option value="" disabled selected>Pilih Lokasi</option>
+                        <option value="Apple Park, Cupertino">Apple Park, Cupertino</option>
+                        <option value="Apple Infinite Loop, Cupertino">Apple Infinite Loop, Cupertino</option>
+                        <option value="One Apple Park Way, Cupertino">One Apple Park Way, Cupertino</option>
+                        <option value="Apple Singapore">Apple Singapore</option>
+                        <option value="Apple Jakarta">Apple Jakarta</option>
+                        <option value="Apple Seoul">Apple Seoul</option>
+                        <option value="Apple Tokyo">Apple Tokyo</option>
+                    </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-[#1d1d1f]">Gaji (USD / Tahun)</label>
