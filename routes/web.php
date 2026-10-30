@@ -4,14 +4,11 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Redirect halaman utama ke login
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+Route::redirect('/', '/login')->name('spa');
 
 // Route yang membutuhkan Auth
 Route::middleware(['auth'])->group(function () {
-    
+
     // Dashboard & Employees list (Bisa diakses Admin & User)
     Route::get('/dashboard', [EmployeeController::class, 'index'])->name('dashboard');
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
